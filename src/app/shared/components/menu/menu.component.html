@@ -1,0 +1,31 @@
+<div class="menu-container">
+  <mat-list role="list">
+    <a
+      mat-list-item
+      routerLink="/"
+      (click)="menuToggle()"
+    >
+      <mat-icon mat-list-icon fontIcon="home"></mat-icon>
+      <span>Inicio</span>
+      <mat-divider></mat-divider>
+    </a>
+    <a
+      mat-list-item
+      routerLink="/pacientes"
+      (click)="menuToggle()"
+    >
+      <mat-icon mat-list-icon fontIcon="people"></mat-icon>
+      <span>Pacientes</span>
+      <mat-divider></mat-divider>
+    </a>
+    <a
+      mat-list-item
+      routerLink="/users"
+      (click)="menuToggle()"
+    >
+      <mat-icon mat-list-icon fontIcon="people"></mat-icon>
+      <span>users</span>
+      <mat-divider></mat-divider>
+    </a>
+  </mat-list>
+</div>

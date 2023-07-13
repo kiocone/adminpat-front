@@ -1,0 +1,24 @@
+.center {
+  right: auto;
+  left: auto;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.content-apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 1rem;
+}
+
+.subtitle {
+  margin-top: 15px;
+}
