@@ -2,3 +2,21 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.toast-snackbar {
+  .mat-simple-snackbar-action {
+    color: white;
+  }
+  &.info {
+    --mdc-snackbar-container-color: #3f51b5;
+  }
+  &.success {
+    --mdc-snackbar-container-color: #0fb657;
+  }
+  &.warning {
+    --mdc-snackbar-container-color: #e29505;
+  }
+  &.danger {
+    --mdc-snackbar-container-color: #ff4500;
+  }
+}

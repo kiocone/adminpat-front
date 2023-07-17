@@ -15,9 +15,9 @@ a {
 
 .content-apps {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  grid-gap: 1rem;
-}
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  grid-gap: 8px;
+  margin-left: 15px;}
 
 .subtitle {
   margin-top: 15px;

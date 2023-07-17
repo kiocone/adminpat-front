@@ -1,0 +1,15 @@
+.center-text {
+  text-align: center;
+}
+
+.actions {
+  display: flex;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+mat-card {
+  max-width: 960px;
+  min-width: 770px;
+  margin: 0 auto;
+}

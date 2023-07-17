@@ -1,0 +1,19 @@
+<mat-toolbar class="secondary-toolbar">
+  <div *ngIf="showButton">
+    <button mat-icon-button aria-label="Back icon-button" (click)="back()">
+      <mat-icon class="back-icon">arrow_back_ios</mat-icon>
+    </button>
+  </div>
+  <span class="center">{{pageName}}</span>
+  <div *ngIf="actionIcon">
+    <span align="end">
+      <button
+      mat-icon-button
+      color="primary"
+      (click)="onNavAction(actionRoute ? actionRoute : actionIcon)"
+      >
+        <mat-icon class="action-Icon">{{actionIcon}}</mat-icon>
+      </button>
+    </span>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,10 @@
+mat-card {
+  max-width: 960px;
+  min-width: 770px;
+  margin: 10px auto;
+}
+
+mat-card-content {
+  display: flex;
+  column-gap: 15px;
+}

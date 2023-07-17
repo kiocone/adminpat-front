@@ -1,0 +1,41 @@
+<navigation
+  pageName="Usuarios"
+  parentRoute="/"
+  showButton="true"
+  actionIcon="add"
+  actionRoute="new"
+></navigation>
+<mat-card>
+  <mat-card-content>
+    <table mat-table [dataSource]="usersList"
+    >
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>E-Mail</th>
+        <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+      </ng-container>
+      <ng-container matColumnDef="username">
+        <th class="center-text" mat-header-cell *matHeaderCellDef>Usuario</th>
+        <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+      </ng-container>
+      <ng-container matColumnDef="fullname">
+        <th class="center-text" mat-header-cell *matHeaderCellDef>Nombre</th>
+        <td mat-cell *matCellDef="let element">{{ element.fullname }}</td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th class="center-text" mat-header-cell *matHeaderCellDef>acciones</th>
+        <td mat-cell *matCellDef="let element">
+          <div class="actions">
+            <button mat-stroked-button type="button" color="primary" (click)="edit(element.id)">Editar</button>
+            <button mat-stroked-button type="button" color="warn" (click)="remove(element.id)">Eliminar</button>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </mat-card-content>
+</mat-card>
