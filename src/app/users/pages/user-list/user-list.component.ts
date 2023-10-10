@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { UserService } from "../../service/user.service";
 import { User } from "../../interfaces/user.interface";
 import { HttpResponse } from "@angular/common/http";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'user-list',
@@ -22,6 +23,7 @@ export class UserListComponent implements OnInit {
 
   constructor(
     private userService: UserService,
+    private router: Router,
   ){}
 
   ngOnInit(): void {
@@ -35,7 +37,7 @@ export class UserListComponent implements OnInit {
   }
 
   edit(id: number){
-    console.log(id)
+    this.router.navigateByUrl(`/users/${id.toString()}`)
   }
 
   remove(id: number){
