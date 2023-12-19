@@ -40,4 +40,14 @@ export class UserService {
       }
     )
   }
+
+  getUserbyId(id: number): Observable<HttpResponse<User>> {
+    return this.http.get<User>(
+     `${environment.API_URL}/users/${id}`,
+     {
+      headers: this.httpHeaders,
+      observe: 'response'
+     }
+    )
+  }
 }
