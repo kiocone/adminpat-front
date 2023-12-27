@@ -50,4 +50,15 @@ export class UserService {
      }
     )
   }
+
+  updateUserById(id: number, user: any): Observable<HttpResponse<any>> {
+    return this.http.put(
+      `${environment.API_URL}/users/${id}`,
+      user, 
+      {
+        headers: this.httpHeaders,
+        observe: 'response'
+      }
+    )
+  }
 }
