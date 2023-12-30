@@ -61,4 +61,14 @@ export class UserService {
       }
     )
   }
+
+  deleteUser(id: number): Observable<HttpResponse<any>> {
+    return this.http.delete(
+      `${environment.API_URL}/users/${id}`,
+      {
+        headers: this.httpHeaders,
+        observe: 'response'
+      }
+    )
+  }
 }

@@ -1,0 +1,24 @@
+<h1 mat-dialog-title>{{ data.title }}</h1>
+<mat-dialog-content>
+  {{ data.message }}
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <!-- Cancel button -->
+  <button
+    *ngIf="data.showCancelButton"
+    mat-stroked-button
+    [mat-dialog-close]="false"
+  >
+    {{ data.cancelBtnText || 'Cancelar' }}
+  </button>
+  <!-- Confirm button -->
+  <button
+    mat-stroked-button
+    [color]="data.confirmBtnColor || 'primary'"
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    (click)="onConfirm()"
+  >
+    {{ data.confirmBtnText || 'Aceptar' }}
+  </button>
+</mat-dialog-actions>

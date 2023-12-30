@@ -9,6 +9,7 @@ import { PanelCard } from "./components/panel-card.component";
 import { HttpClientModule } from "@angular/common/http";
 import { NavigationComponent } from "./components/navigation/navigation.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { ConfirmModalComponent } from "./components/confirm-modal/confirm-modal.component";
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from "@angular/forms";
     Menu,
     PanelComponent,
     NavigationComponent,
+    ConfirmModalComponent
   ],
   imports: [
     CommonModule,

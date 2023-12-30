@@ -5,7 +5,7 @@
   actionIcon="add"
   actionRoute="new"
 ></navigation>
-<mat-card>
+<mat-card *ngIf="show">
   <mat-card-content>
     <table mat-table [dataSource]="usersList"
     >
